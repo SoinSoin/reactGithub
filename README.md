@@ -1,26 +1,28 @@
-
 ## progression su ma branche dev
 
 https://github.com/SoinSoin/reactGithub/tree/dev
 
-## Utilisé
+##  Utilisé
+
 ```
 React
 Bootstrap React
 React-dom-router
 React-router
 ```
-## Utilité
+##  Utilité
+
 -> Bootstrap pour les composents et la mise en page sans trop d'effort pour me focaliser sur les fonctionnalités (p'tite ruse de coyotte).
 
 -> React-rooter pour mes routes entre mes pages 
 
-## Difficultés
+##  Difficultés
+
 -> Return avec un point map mes resultats ansi qu'à stocker les valeurs dans mon setState.
 
 -> Impossible de faire fonctionner les evenements react j'ai du utiliser les evenements classique mais impossible de les sctockés dans mon setState.
 
-## Sujet
+##  Sujet
 
 ```
 Annonce: GitHub veut refaire son site web !
