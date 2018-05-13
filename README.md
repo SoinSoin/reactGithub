@@ -1,8 +1,8 @@
-<<<<<<< HEAD
+
 ## progression su ma branche dev
 
 https://github.com/SoinSoin/reactGithub/tree/dev
-=======
+
 ## Utilisé
 ```
 React
@@ -92,4 +92,3 @@ Quelques conseils de notre master Octo 🐙
 
 
 
->>>>>>> dev
