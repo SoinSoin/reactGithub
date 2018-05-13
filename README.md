@@ -1,9 +1,19 @@
 ## Utilisé
+```
 React
 Bootstrap React
-
+React-dom-router
+React-router
+```
 ## Utilité
-React comme le demande l'exercice et bootstrap pour les composents et la mise en page. 
+-> Bootstrap pour les composents et la mise en page sans trop d'effort pour me focaliser sur les fonctionnalités (p'tite ruse de coyotte).
+
+-> React-rooter pour mes routes entre mes pages 
+
+## Difficultés
+-> Return avec un point map mes resultats ansi qu'à stocker les valeurs dans mon setState.
+
+-> Impossible de faire fonctionner les evenements react j'ai du utiliser les evenements classique mais impossible de les sctockés dans mon setState.
 
 ## Sujet
 
