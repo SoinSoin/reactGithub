@@ -3,18 +3,20 @@ import ReactDOM from "react-dom";
 import * as Bootstrap from "react-bootstrap";
 import { Link } from 'react-router-dom';
 
-//je créer mon composant App
-export default class App extends Component {
+
+//je créer mon composant Teamusers
+export class Teamusers extends Component {
 
   //je construit/instancie l'état de la propriété de mon composant
   constructor(props) {
     super(props);
     this.state = {
+
       usersgit: []
     };
   }
 
-  //dans cette methode ou fonction je lui dit que user git va être un esnsemble.
+  //dans cette methode ou fonction je lui dit que user git va être un esnsemble (state permet de contenir les données que l'on veut utiliser/afficher).
   fetchGitData() {
     this.setState({
       usersgit: []
@@ -39,17 +41,17 @@ export default class App extends Component {
         })
       )
       .catch(error => console.error("error"));
-  }
-  //cette fonction propre a react permet de lié les noeuds entre ma methode constructor et ces propriété et mon composant 
-  componentDidMount() {
-    this.fetchGitData();
-  }
-  //je rend une vue 
-  render() {
-    //je redefinis ma methode usergit en tant que tableau dans le render en lui attribuant  l'etat definis dans le constructor attribut qui contient les resultats de recuperer plus haut. Je declare valeur de users git est dans un tableaux
-    const {usersgit } = this.state;
+    }
+    //cette fonction propre a react permet de lié les noeuds entre ma methode constructor et ces propriété et mon composant 
+    componentDidMount() {
+      this.fetchGitData();
+    }
+    //je rend une vue 
+    render() {
+      //je redefinis ma methode usergit en tant que tableau dans le render en lui attribuant  l'etat definis dans le constructor attribut qui contient les resultats de recuperer plus haut. Je declare valeur de users git est dans un tableaux
+     const {usersgit } = this.state;
     return (
-      <div className="App">
+      <div className="Teamusers">
         <Bootstrap.Grid>
           <Bootstrap.Row>
             {/* dans cette partie je vais créer mes composants dynamique */}
@@ -60,9 +62,9 @@ export default class App extends Component {
             <Bootstrap.Col xs={6} md={2}>
                       <Bootstrap.Thumbnail align="middle" alt="171x180" src={usergit.avatar_url}>
                         <h4>{usergit.login}</h4>
-                        <p>-{usergit.id}-</p>
+                        <p className="myUser">-{usergit.id}-</p>
                         <p>
-                          <Bootstrap.Button bsStyle="success">
+                          <Bootstrap.Button  data-target={usergit.id} onClick={this.props.recup} bsStyle="success">
                             View more
                           </Bootstrap.Button>
                         </p>
@@ -77,4 +79,3 @@ export default class App extends Component {
     );
   }
 }
-// export default App;
