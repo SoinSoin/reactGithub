@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
 import * as Bootstrap from "react-bootstrap";
-
+import { Link } from 'react-router-dom';
 
 //je créer mon composant App
-class App extends Component {
+export default class App extends Component {
 
   //je construit/instancie l'état de la propriété de mon composant
   constructor(props) {
@@ -14,7 +14,7 @@ class App extends Component {
     };
   }
 
-  //dans cette methode ou fonction je lui dit qu'elle se réfaire à e
+  //dans cette methode ou fonction je lui dit que user git va être un esnsemble.
   fetchGitData() {
     this.setState({
       usersgit: []
@@ -38,7 +38,7 @@ class App extends Component {
           usersgit,
         })
       )
-      .catch(error => console.log("parsing failed", error));
+      .catch(error => console.error("error"));
   }
   //cette fonction propre a react permet de lié les noeuds entre ma methode constructor et ces propriété et mon composant 
   componentDidMount() {
@@ -54,7 +54,7 @@ class App extends Component {
           <Bootstrap.Row>
             {/* dans cette partie je vais créer mes composants dynamique */}
               {
-                // c'est pourquoi ici je parcours usersgit avec .map() et il le parcours que si mon tableau est non null si oui il me retourn le resultat dans une vue qui est mon composant. 
+                // c'est pourquoi ici je parcours usersgit avec .map() et il le parcours que si mon tableau est non null. il me retourn ele resultat dans une vue qui est mon composant. 
                 usersgit.length > 0 ? usersgit.map(usergit => {
                     return (
             <Bootstrap.Col xs={6} md={2}>
@@ -77,4 +77,4 @@ class App extends Component {
     );
   }
 }
-export default App;
+// export default App;
