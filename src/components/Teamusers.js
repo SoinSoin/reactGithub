@@ -49,7 +49,7 @@ export class Teamusers extends Component {
     //je rend une vue 
     render() {
       //je redefinis ma methode usergit en tant que tableau dans le render en lui attribuant  l'etat definis dans le constructor attribut qui contient les resultats de recuperer plus haut. Je declare valeur de users git est dans un tableaux
-     const {usersgit } = this.state;
+    const {usersgit } = this.state;
     return (
       <div className="Teamusers">
         <Bootstrap.Grid>
@@ -59,8 +59,8 @@ export class Teamusers extends Component {
                 // c'est pourquoi ici je parcours usersgit avec .map() et il le parcours que si mon tableau est non null. il me retourn ele resultat dans une vue qui est mon composant. 
                 usersgit.length > 0 ? usersgit.map(usergit => {
                     return (
-            <Bootstrap.Col key={usergit.id} xs={6} md={2}>
-                      <Bootstrap.Thumbnail align="middle" alt="171x180" src={usergit.avatar_url}>
+          <Bootstrap.Col key={usergit.id} xs={6} md={2}>
+                  <Bootstrap.Thumbnail align="middle" alt="171x180" src={usergit.avatar_url}>
                         <h4>{usergit.login}</h4>
                         <p className="myUser">-{usergit.id}-</p>
                         <p>
@@ -68,7 +68,7 @@ export class Teamusers extends Component {
                             View more
                           </Bootstrap.Button>
                         </p>
-                      </Bootstrap.Thumbnail>
+                   </Bootstrap.Thumbnail>
             </Bootstrap.Col>
                     );
                   })

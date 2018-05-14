@@ -9,6 +9,11 @@ React
 Bootstrap React
 React-dom-router
 React-router
+
+!  en cas de bug pour lancer le serveur
+$ npm cache verify
+supprimer le fichier node du fichier
+$ npm install
 ```
 ##  Utilité
 
