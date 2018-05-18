@@ -33,7 +33,7 @@ export class Teamusers extends Component {
   renderUsersgit(usergit) {
     return (
       <Bootstrap.Col key={usergit.id} xs={6} md={2}>
-        <Bootstrap.Thumbnail align="middle" alt="171x180" src={usergit.avatar_url}>
+        <Bootstrap.Thumbnail align="middle"  src={usergit.avatar_url}>
           <h4>{usergit.login}</h4>
           <p className="myUser">-{usergit.id}-</p>
           <p>
