@@ -35,7 +35,6 @@ export default class App extends Component {
             <Teamusers recup={this.state.onRecup} />
           </Route>
           <Route path={"/" + onRecup} component={User} />
-          {console.log(() => this.state.onRecup())}
         </div>
       </Router>
     );
