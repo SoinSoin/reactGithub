@@ -11,10 +11,10 @@ export class Teamusers extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      usersgit: []
-    };
+      usersgit: [],
+    }
   }
-  //par la  promesse fetch je recupere les données de l'api REST (encore du mal a comprendre le systeme de promesse)
+
   async fetchGitData() {
     try {
       let user = await fetch("https://api.github.com/users?since=0")
@@ -24,6 +24,7 @@ export class Teamusers extends Component {
       alert("marche pas");
     }
   }
+
 
   componentDidMount() {
     this.fetchGitData();
@@ -36,9 +37,7 @@ export class Teamusers extends Component {
           <h4>{usergit.login}</h4>
           <p className="myUser">-{usergit.id}-</p>
           <p>
-            <Bootstrap.Button data-target={usergit.id} onClick={this.props.recup} bsStyle="success">
-              View more
-            </Bootstrap.Button>
+            <Link to={`/${usergit.login}`}><Bootstrap.Button bsStyle="success">view more</Bootstrap.Button></Link>
           </p>
         </Bootstrap.Thumbnail>
       </Bootstrap.Col>
